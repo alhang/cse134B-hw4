@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alan Hang's Digital Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alan Hang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="icon" type="image/jpeg" href="./media/favicon.png">
+        <!--Placeholder stylesheet-->
+        <style>
+            #nav-projects{
+                background-color:rgb(0, 162, 255);
+            }
+
+            .material-symbols-outlined {
+                margin: 0;
+                padding: 0;
+                
+                position: sticky; 
+                float: right;
+                top: 1.5rem;
+            }
+
+            @media (max-width: 25rem) {
+                .material-symbols-outlined {
+                    position: absolute;
+                    visibility: hidden;
+                }   
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title">Alan's Digital Portfolio</h1>
+
+            <nav>
+                <ul>
+                    <li><a id="nav-home" href="./index.html">HOME</a></li>
+                    <li><a id="nav-about" href="./about.html">ABOUT</a></li>
+                    <li><a id="nav-projects" href="./projects.html">PROJECTS</a></li>
+                    <li><a id="nav-skills" href="./skills.html">SKILLS</a></li>
+                    <li><a id="nav-contact" href="./contact.html">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+            <section>
+                <h2>Projects</h2>
+                <p>Here's a breakdown of my most recent projects.</p>
+            </section>
+
+            <section>
+                <aside><p><i>Click to learn more!</i></p></aside>
+                <ol>
+                    <li>
+                        <details>
+                            <summary><strong>Birds of a Feather App</strong><span class="material-symbols-outlined">phone_iphone</span></summary>
+                            <ul>
+                                <li>Co-led of a team of five people and used Agile software development techniques to coordinate the team</li>
+                                <li>Used Android Studio to create an app that found nearby students with common interests and shared
+                                    classes through bluetooth</li>
+                                <li>Coordinated standup meetings to make sure our team members reached deadlines before each milestone</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary><strong>Cryptocurrency Research</strong><span class="material-symbols-outlined">currency_bitcoin</span></summary>
+                            <ul>
+                                <li>Led a team of 3 people to conduct research on the correlation between the effect Covid had on the 
+                                    global economy and the shifts in prices on Cryptocurrency</li>
+                                <li>Used Juypter notebook to perform data wrangling from websites, data visualization and EDA analysis 
+                                    on the collected data, and used linear regression modelling and machine learning to predict the 
+                                    price of Cryptocurrency</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary><strong>UX/UI Design Research</strong><span class="material-symbols-outlined">electric_scooter</span></summary>
+                            <ul>
+                                <li>Led a team of 4 people to research methods for improving the UI/UX of the app for SPIN (scooter app)</li>
+                                <li>Created prototypes that led to a more streamlined experience and eliminated user pain points</li>
+                                <li>Increased user satisfaction and parking etiquette by implementing reward system</li>
+                            </ul>
+                        </details>
+                    </li>
+                </ol>
+            </section>
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>Author: Alan Hang</p>
+            <p><a href="mailto:alhang@ucsd.edu">alhang@ucsd.edu</a></p>
+        </footer>
+    </body>
+
+</html>

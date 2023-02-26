@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --lightblue: rgb(182, 235, 255);
+    --brightblue: rgb(0, 162, 255);
+    --darkblue: rgb(0, 89, 162);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(./fonts/lato/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: Lato-bold;
+    src: url(./fonts/lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: ostrick-sans-black;
+    src: url(./fonts/ostrich-sans/ostrich-black.ttf);
+}
+
+@font-face {
+    font-family: Niconne;
+    src: url(./fonts/Niconne/Niconne-Regular.ttf);
+}
+
+#title{
+    font-family: ostrick-sans-black, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    padding: 0.3rem;
+    
+    margin-right: 5rem;
+    margin-left: 5rem;
+    
+    background-image: linear-gradient(
+      -240deg,
+      #1f1250 0%,
+      #3d0f6f 14%,
+      #ee1e63 28%,
+      #e7e129 42%,
+      #ee1e63 72%,
+      #3d0f6f 86%,
+      #1f1250 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 300% auto;
+    background-clip: text;
+    
+    animation: textclip 20s linear infinite;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-reflect: below -2rem linear-gradient(transparent, rgba(0,0,0,.1));
+}
+
+@keyframes textclip {
+    to {
+      background-position: 300% center;
+    }
+  }
+
+h2, h3, h4{
+    font-family: ostrick-sans-black , 'Times New Roman', Times, serif;
+}
+
+p, li, label, td{
+    max-width: 150ch;
+    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+summary, legend, th{
+    font-family: Lato-bold, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: white;
+    background-image: linear-gradient(var(--lightblue), white);
+    background-repeat: no-repeat;
+    
+    transition-property: all;
+}
+
+main {
+    background-color: white;
+    border-radius: 3rem;
+
+    padding: 3rem 5rem;
+    
+    margin-right: 5rem;
+    margin-left: 5rem;
+
+    animation: fadeIn 1.75s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        margin-top: 4%;
+        height: 120%; 
+    }
+    
+    to { 
+        opacity: 1;
+        margin-top: 0%;
+        height: 100%;
+    }
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem;
+}
+
+details {
+    min-width: 18rem;
+    width: 50%;
+    color:#fff;
+    background-color:var(--brightblue);
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+summary:hover {
+    background-color:var(--brightblue);
+}
+  
+summary {
+    padding: 1rem;
+    display: block;
+    background-color: var(--darkblue);
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+}
+  
+summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+  
+details[open] > summary:before {
+    transform: rotate(90deg);
+}
+
+details > ul {
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+    transition: margin-top 500ms ease-out;
+    animation: fadeDown 0.5s;
+}
+  
+details summary::-webkit-details-marker {
+    display:none;
+}
+
+@keyframes fadeDown {
+    from { 
+        opacity: 0;
+        margin-top: -1%;
+        height: -120%;
+    }
+
+    to { 
+        opacity: 1;
+        margin-top: 0%;
+        height: 100%; 
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    gap: 0.3rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+  
+nav li {
+    border-radius: 1rem;
+    flex-grow: 1;
+    float: left;
+    background-color: var(--darkblue);
+}
+  
+nav li a {
+    font-family: Lato-bold, 'Times New Roman', Times, serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+  
+nav li:hover {
+    background-color:var(--brightblue);
+}
+
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.image_gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.card_image {
+    height: 25rem;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+fieldset {
+    width: 50%
+}
+
+footer {
+    padding: 1rem 0;
+    margin: 0 5rem;
+}
+
+caption {
+    float: left;
+}
+
+.intro{
+    padding-right: 3vw;
+    margin: 5vw 5rem;
+    font-size: 15vw;
+    text-align: center;
+    height: 12vw;
+    max-height: 9rem;
+    line-height: 8vw;
+    border-radius: 5px;
+
+    animation: fadeIn2 1.75s;
+
+    color: white;
+    background: var(--darkblue);
+    font-family: 'Niconne', cursive;
+    font-weight: 600;
+    text-shadow: 0.5vw 0.5vw 0vw #3a618c, 
+            1vw 1vw 0vw #a66803, 
+            1.5vw 1.5vw 0vw #03a69b, 
+            2vw 2vw 0vw #039492, 
+            2.5vw 2.5vw 0vw #a61603, 
+            3vw 3vw 0vw #1b5889, 
+            3.5vw 3.5vw 0vw #1b5889
+}
+
+@keyframes fadeIn2 {
+    from { 
+        opacity: 0;
+    }
+    
+    to { 
+        opacity: 1;
+    }
+}
+
+textarea {
+    min-height: 3ch;
+    min-width: 10ch;
+    max-width: 100%;
+}
+
+@media (min-width: 70rem) {
+    .intro{
+        font-size: 10.7rem;
+    }
+}
+
+@media (max-width: 44rem) {
+    details{
+        min-width: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    nav li a {
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    main {
+        padding: 1rem 2rem;
+        
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 1rem;
+    }
+
+    .intro{
+        margin: 5vw 1rem;
+    }
+
+    #title{
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 1rem;
+
+        -webkit-box-reflect: none;
+    }
+
+    .image_gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    fieldset {
+        width: 100%
+    }
+
+    footer {
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    textarea {
+        min-height: 3ch;
+        min-width: 10ch;
+        width: 100%;
+    }
+}
+

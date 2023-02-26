@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alan Hang's Digital Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alan Hang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> body { border: solid 5px;} </style>
+        <!--Included style here to use the style tag-->
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Back to home</a></li>
+            </ul>
+        </nav>
+
+        <h3>Code tag</h3>            
+        <p><code>To return click "Back to home"</code></p>
+
+        <h3>iFrame tag</h3>
+            <iframe src="https://ucsd.edu/" width="400" height="400"></iframe>
+        <br>
+
+        <h3>Audio tag</h3>
+        <p>When your HTML tags don't fit anywhere in your site.<p>
+        <audio controls src="./media/trumpet.mp3">Your browser does not support audio.</audio>
+
+        <br>
+
+        <h3>Video & source tag</h3>
+        <video controls width="400" height="300">
+            <source src="./media/boowomp.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+        <br><br>
+
+        <h3>Template tag</h3>
+        <button>Show hidden text</button>
+        <template>
+            <p>Clicking that button won't reveal this because there is no javascript.</p>
+        </template>
+        
+
+        <h3>Canvas tag</h3>
+        <figure>
+            <canvas id="drawing">Sorry, canvas does not work on your browser :(</canvas>
+            <script>
+                var canvas = document.getElementById("drawing");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#89CFF0";
+                ctx.fillRect(10, 30, 250, 200);
+            </script>
+            <!--Included script here to use the canvas tag-->
+            <figcaption><i>Block of color</i></figcaption>
+        </figure>
+    </body>
+</html>
