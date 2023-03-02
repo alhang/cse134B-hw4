@@ -9,13 +9,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="icon" type="image/jpeg" href="./media/favicon.png">
         <!--Placeholder stylesheet-->
         <style>
-            #nav-projects{
-                background-color:rgb(0, 162, 255);
-            }
-
             .material-symbols-outlined {
                 margin: 0;
                 padding: 0;
@@ -39,10 +36,11 @@
             <h1 id="title">Alan's Digital Portfolio</h1>
 
             <nav>
+                <button id="burger"><span class="material-symbols-outlined">menu</span></button>
                 <ul>
                     <li><a id="nav-home" href="./index.html">HOME</a></li>
                     <li><a id="nav-about" href="./about.html">ABOUT</a></li>
-                    <li><a id="nav-projects" href="./projects.html">PROJECTS</a></li>
+                    <li><a id="nav-projects" class="active" href="./projects.html">PROJECTS</a></li>
                     <li><a id="nav-skills" href="./skills.html">SKILLS</a></li>
                     <li><a id="nav-contact" href="./contact.html">CONTACT ME</a></li>
                 </ul>
@@ -103,6 +101,8 @@
             <p>Author: Alan Hang</p>
             <p><a href="mailto:alhang@ucsd.edu">alhang@ucsd.edu</a></p>
         </footer>
+
+        <script src="./main.js"></script>
     </body>
 
 </html>

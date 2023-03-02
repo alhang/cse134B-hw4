@@ -7,10 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/style.css">
         <link rel="icon" type="image/jpeg" href="./media/favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!--Placeholder stylesheet-->
         <style>
-            #nav-about{
-                background-color:rgb(0, 162, 255);
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 48
             }
 
             #zion{
@@ -30,9 +35,10 @@
             <h1 id="title">Alan's Digital Portfolio</h1>
 
             <nav>
+                <button id="burger"><span class="material-symbols-outlined">menu</span></button>
                 <ul>
                     <li><a id="nav-home" href="./index.html">HOME</a></li>
-                    <li><a id="nav-about" href="./about.html">ABOUT</a></li>
+                    <li><a id="nav-about" class="active" href="./about.html">ABOUT</a></li>
                     <li><a id="nav-projects" href="./projects.html">PROJECTS</a></li>
                     <li><a id="nav-skills" href="./skills.html">SKILLS</a></li>
                     <li><a id="nav-contact" href="./contact.html">CONTACT ME</a></li>
@@ -129,6 +135,8 @@
             <p>Author: Alan Hang</p>
             <p><a href="mailto:alhang@ucsd.edu">alhang@ucsd.edu</a></p>
         </footer>
+
+        <script src="./main.js"></script>
     </body>
 
 </html>
