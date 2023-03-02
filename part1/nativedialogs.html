@@ -16,6 +16,7 @@
         <hr>
         <p id="result"></p>
 
+        <script src="./purify.js"></script>
         <script>
             const confirmButton = document.getElementById("confirm-button");
             const promptButton = document.getElementById("prompt-button");
@@ -34,19 +35,19 @@
                 let out;
                 let smtg = prompt("Enter something");
                 if(smtg == null || smtg == ""){
-                    document.getElementById("result").textContent = "User didn’t enter anything";
+                    document.getElementById("result").innerHTML = "User didn’t enter anything";
                 }else{
-                    document.getElementById("result").textContent = "Prompt: "+smtg;
+                    document.getElementById("result").innerHTML = "Prompt: "+smtg;
                 }
             })
 
             safePButton.addEventListener("click",() => {
                 let out;
-                let smtg = prompt("Enter something");
+                let smtg = DOMPurify.sanitize(prompt("Enter something"));
                 if(smtg == null || smtg == ""){
-                    document.getElementById("result").textContent = "User didn’t enter anything";
+                    document.getElementById("result").innerHTML = "User didn’t enter anything";
                 }else{
-                    document.getElementById("result").textContent = "Prompt: "+smtg;
+                    document.getElementById("result").innerHTML = "Prompt: "+smtg;
                 }
             })
         </script>

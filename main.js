@@ -2,7 +2,6 @@ window.onload = init;
 window.onscroll = stickNavbar;
 const navbar = document.querySelector("nav");
 var navbarY = navbar.offsetTop;
-//window.onbeforeunload = 
 document.getElementById("burger").addEventListener('click', burgerMenu);
 
 function init(){
