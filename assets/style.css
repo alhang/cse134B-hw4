@@ -187,6 +187,15 @@ details summary::-webkit-details-marker {
     }
 }
 
+button, input[type="submit"]{
+    background-color: var(--darkblue);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    font-family: Lato-bold, Verdana, Geneva, Tahoma, sans-serif;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;

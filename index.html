@@ -12,6 +12,15 @@
                 background-color:rgb(0, 162, 255);
             }
         </style>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MLS2B7Z4K"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5MLS2B7Z4K');
+        </script>
     </head>
 
     <body>
@@ -35,29 +44,13 @@
             
 
             <section>
-                <h2><span style="color:rgb(0, 24, 255)"><em>Thank you</em> for visiting my site!</span></h2>
+                <h2 id="greeting"></h2>
+                
                 <p>This site is a digital portfolio showcasing my achievements and abilities. I hope that this site
                     informs you well. If you have any comments, questions, or concerns, please feel free to head
                     over to the "Contact Me" section where you can reach me in a multitude of ways.
                 </p>
             </section>
-            
-            <!--
-            <section>
-                <h3>Test Page</h3>
-                <p>This is an experimental page to test the functionality of some HTML features that do not fit into the flow and content of the site.</p>
-                <form action="./test.html">
-                    <input type="submit" value="Go to testing page">
-                </form>
-            </section>
-            -->
-            <!--
-            <svg height="130" width="500">
-                <ellipse cx="100" cy="70" rx="85" ry="55" fill="blue" />
-                <text fill="#ffffff" font-size="50" font-family="Verdana" x="35" y="87">ALAN</text>
-            </svg>
-            -->
-
         </main>
 
         <hr>
@@ -66,5 +59,7 @@
             <p>Author: Alan Hang</p>
             <p><a href="mailto:alhang@ucsd.edu">alhang@ucsd.edu</a></p>
         </footer>
+
+        <script src="./main.js"></script>
     </body>
 </html>
