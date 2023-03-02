@@ -8,6 +8,7 @@ function init(){
     greet();
 }
 
+//makes a responsive burger menu
 function burgerMenu(){
     if (navbar.className === "") {
         navbar.className = "responsive";
@@ -16,6 +17,7 @@ function burgerMenu(){
     }
 }
 
+//makes the navbar sticky
 function stickNavbar() {
     if (window.pageYOffset >= navbarY - 36.5) {
         navbar.classList.add("sticky")
@@ -24,6 +26,7 @@ function stickNavbar() {
     }
 }
 
+//greets user based on time of day
 function greet(){
     let date = new Date();
     let hrs = date.getHours();
