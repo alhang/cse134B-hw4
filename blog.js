@@ -27,9 +27,11 @@ window.onbeforeunload = save;
 //prepopulate array if empty
 //set event listeners
 function init(){
-  posts = JSON.parse(localStorage.getItem('posts'));
-  if(!Array.isArray(posts) || !posts.length){
+  let saved = JSON.parse(localStorage.getItem('posts'));
+  if(!Array.isArray(saved) || !saved.length){
     prePop();
+  }else{
+    posts = saved;
   }
   posts.forEach(display);
   addBtn.addEventListener('click', add);
