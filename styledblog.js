@@ -15,7 +15,7 @@ const sumField = document.getElementById('summary');
 const out = document.querySelector('output');
 
 //globals
-var posts = [new blogEntry("Hello World!", "03/01/2023", "Welcome to my blog!")];
+var posts = [];
 var editOn = 0;
 var editInd = -1;
 
