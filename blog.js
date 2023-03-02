@@ -28,7 +28,9 @@ window.onbeforeunload = save;
 //set event listeners
 function init(){
   posts = JSON.parse(localStorage.getItem('posts'));
-  if(posts == NULL || posts.length == 0){
+  if(posts == NULL){
+    prePop();
+  } else if(posts.length == 0){
     prePop();
   }
   posts.forEach(display);
