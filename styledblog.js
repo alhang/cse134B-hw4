@@ -40,6 +40,12 @@ function init(){
   popup.addEventListener('close', close);
 }
 
+//prepopulate array
+function prePop(){
+  let entry = new blogEntry("Hello World!", "03/01/2023", "Welcome to my blog!");
+  posts.push(entry);
+}
+
 //strigify and save array to local storage
 function save(){
   localStorage.setItem('posts',  JSON.stringify(posts));
