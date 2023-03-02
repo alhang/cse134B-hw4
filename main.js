@@ -1,7 +1,9 @@
 window.onload = init;
 window.onscroll = stickNavbar;
 const navbar = document.querySelector("nav");
+const burger = document.getElementById("burger");
 var navbarY = navbar.offsetTop;
+var burgerY = burger.offsetTop;
 document.getElementById("burger").addEventListener('click', burgerMenu);
 
 function init(){
@@ -10,19 +12,31 @@ function init(){
 
 //makes a responsive burger menu
 function burgerMenu(){
-    if (navbar.className === "") {
-        navbar.className = "responsive";
+    if (navbar.className === "" || navbar.className === "sticky") {
+        if(navbar.className === "sticky"){
+            navbar.classList.add("responsive");
+            navbar.classList.add("show");
+        }else{
+            navbar.classList.add("responsive");
+        }
     } else {
-        navbar.className = "";
+        navbar.classList.remove("responsive");
+        navbar.classList.remove("show");
     }
 }
 
 //makes the navbar sticky
 function stickNavbar() {
-    if (window.pageYOffset >= navbarY - 36.5) {
-        navbar.classList.add("sticky")
+    if (window.pageYOffset >= navbarY - 20) {
+        navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
+    }
+
+    if (window.pageYOffset >= burgerY - 40) {
+        burger.classList.add("stickyBurger");
+    } else {
+        burger.classList.remove("stickyBurger");
     }
 }
 
