@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alan Hang's Digital Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alan Hang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpeg" href="./media/favicon.png">
+    </head>
+
+    <body>
+        <button onclick="alert('Hi')">Alert</button>
+        <button id="confirm-button">Confirm</button>
+        <button id="prompt-button">Prompt</button>
+        <button id="safe-prompt-button">Safer Prompt</button>
+        
+        <hr>
+        <p id="result"></p>
+
+        <script>
+            const confirmButton = document.getElementById("confirm-button");
+            const promptButton = document.getElementById("prompt-button");
+            const safePButton = document.getElementById("safe-prompt-button");
+
+            confirmButton.addEventListener("click",() => {
+                let out = confirm("Please confirm");
+                if(out == null || out == 0){
+                    document.getElementById("result").textContent = "Confirm: FALSE";
+                }else{
+                    document.getElementById("result").textContent = "Confirm: TRUE";
+                }
+            })
+
+            promptButton.addEventListener("click",() => {
+                let out;
+                let smtg = prompt("Enter something");
+                if(smtg == null || smtg == ""){
+                    document.getElementById("result").textContent = "User didn’t enter anything";
+                }else{
+                    document.getElementById("result").textContent = "Prompt: "+smtg;
+                }
+            })
+
+            safePButton.addEventListener("click",() => {
+                let out;
+                let smtg = prompt("Enter something");
+                if(smtg == null || smtg == ""){
+                    document.getElementById("result").textContent = "User didn’t enter anything";
+                }else{
+                    document.getElementById("result").textContent = "Prompt: "+smtg;
+                }
+            })
+        </script>
+    </body>
+</html>

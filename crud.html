@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alan Hang's Digital Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alan Hang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpeg" href="./media/favicon.png">
+        
+    </head>
+
+    <body>
+        <h1>My Blog</h1>
+    
+        <dialog id="popup">
+            <form method="dialog">
+                <p>
+                    <label for="title">Title: </label>
+                    <input id="title" type="text">
+                </p>
+                <p>
+                    <label for="summary">Summary: </label><br>
+                    <textarea id="summary" placeholder="What's on your mind?..."></textarea>
+                </p>
+                <div>
+                    <button id="postBtn" value="default">Post</button>
+                    <button value="">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+        
+        <button id="addBtn">Add</button>
+        <button id="deleteAll">Delete All</button>
+        <hr>
+        <output></output>
+        <script src="./blog.js"></script>
+    </body>
+</html>

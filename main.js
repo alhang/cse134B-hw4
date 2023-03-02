@@ -1,0 +1,1 @@
+import {betterAlert, betterConfirm, betterPrompt} from './customdialog.js';

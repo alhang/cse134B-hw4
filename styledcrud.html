@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alan Hang's Digital Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alan Hang">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpeg" href="./media/favicon.png">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+            button {
+                background-color: var(--darkblue);
+                color: white;
+                border: none;
+                padding: 0.5rem 0.5rem;
+                border-radius: 10px;
+                font-family: Lato-bold, Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .material-symbols-outlined {
+                margin: 0;
+                padding: 0;
+                position: sticky; 
+                float: right;
+                top: 1.5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="title" style="text-align: center;">My Blog</h1>
+        <main>
+        <h2>Blog Posts</h2>
+        <dialog id="popup">
+            <form method="dialog">
+                <p>
+                    <label for="postTitle">Title: </label>
+                    <input id="postTitle" type="text">
+                </p>
+                <p>
+                    <label for="summary">Summary: </label><br>
+                    <textarea id="summary" placeholder="What's on your mind?..."></textarea>
+                </p>
+                <div>
+                    <button id="postBtn" value="default">Post</button>
+                    <button value="">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+        
+        <div>
+        <button id="addBtn">Add</button>
+        <button id="deleteAll">Delete All</button>
+        </div>
+
+        <output></output>
+        </main>
+        <script src="./styledblog.js"></script>
+    </body>
+</html>
