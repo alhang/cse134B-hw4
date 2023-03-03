@@ -31,6 +31,7 @@ function stickNavbar() {
         navbar.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
+        navbar.classList.remove("show");
     }
 
     if (window.pageYOffset >= burgerY - 40) {
